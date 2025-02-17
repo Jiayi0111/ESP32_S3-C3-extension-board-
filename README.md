@@ -1,6 +1,9 @@
-# ESP32_S3-C3-extension-board
+# ESP32S3/C3 extension board
 
-[Go to part1 - Setting Up Development Environment](Setting-up-Development-Enviroment/Setting-Up-Development-Environment.md)
-- [part1.1 Installing Multiple Versions of ESP‐IDF](Setting-up-Development-Enviroment/InstallingMultipleVersionsofESP‐IDF)
+[Go to part 1.0 - Setting Up Development Environment](Setting-up-Development-Enviroment/Setting-Up-Development-Environment.md)
+ -  [part 1.0.1 Installing Multiple Versions of ESP‐IDF](Setting-up-Development-Enviroment/InstallingMultipleVersionsofESP‐IDF)
 
+[Go to part 1.1 - Hello_world (write & compile & flash)](Setting-up-Development-Enviroment/Hello_world)
+ - [part 1.1.1 Understanding Basic Project Structure](Setting-up-Development-Enviroment/BasicProjectStructure)
 
+ 
