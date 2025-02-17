@@ -53,4 +53,4 @@ To install multiple versions:
 
 ## Next
 
-- [3. Hello_world](https://github.com/Jiayi0111/ESP32_S3-C3-extension-board-/wiki/3.-Hello_world)
+- [3. Hello_world](Hello_world)

@@ -58,5 +58,5 @@ If the installation fails, you can seek help by posting your issue on our **foru
 
 ## Next
 
-- [2.1 Installing Multiple Versions of ESP‐IDF](https://github.com/Jiayi0111/ESP32_S3-C3-extension-board-/wiki/2.1-Installing-Multiple-Versions-of-ESP%E2%80%90IDF)
-- [3. Hello_world](https://github.com/Jiayi0111/ESP32_S3-C3-extension-board-/wiki/3.-Hello_world)
+- [2.1 Installing Multiple Versions of ESP‐IDF](InstallingMultipleVersionsofESP‐IDF)
+- [3. Hello_world](Hello_world)
