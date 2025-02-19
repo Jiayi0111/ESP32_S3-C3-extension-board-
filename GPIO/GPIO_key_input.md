@@ -65,28 +65,35 @@ void app_main(void)
   - **Input mode** (`GPIO_MODE_INPUT`).
   - **Internal pull-up enabled** (`pull_up_en = 1`).
 - **Line 11:** Apply the GPIO settings.
-- **Line 14:** Create a **queue** to store GPIO events.
-- **Line 16:** Start the GPIO **task**.
-- **Line 18:** Install a **GPIO interrupt service**.
-- **Line 20:** Attach the **interrupt handler** to GPIO0.
+- **Line 14:** Create a [*queue*](#-queue-handle-gpio_evt_queue) to store GPIO events.
+- **Line 16:** Start the [*GPIO task*](#-gpio-task-gpio_task_example).
+- **Line 18:** Install a [*GPIO interrupt service*](#-interrupt-service-routine-isr).
+- **Line 20:** Attach the **interrupt handler** to GPIO0. 
 
----
+### 📌 Queue handle (`gpio_evt_queue`)
+`gpio_evt_queue` is a queue handle (a pointer to a queue) used to store GPIO interrupt events in FreeRTOS.
+- A queue in FreeRTOS is a **data structure** that allows **tasks and ISRs (interrupts) to communicate** asynchronously.0
+    - **ISRs (interrupt service routines)** cannot directly interact with tasks because they run in a separate execution context.
+    - Instead, **ISRs send data to queues**, and tasks read data from queues.
 
-### **📌 Interrupt Service Routine (`ISR`)**
+`gpio_evt_queue`  is declared as a **global variable** in `main.c`:
 ```c
-static void IRAM_ATTR gpio_isr_handler(void* arg)
-{
-    uint32_t gpio_num = (uint32_t) arg;  // Get the GPIO number
-    xQueueSendFromISR(gpio_evt_queue, &gpio_num, NULL); // Send event to queue
-}
+static QueueHandle_t gpio_evt_queue = NULL;
 ```
-- **This function runs when GPIO0 detects a button press**.
-- **Sends an event to the queue** (`gpio_evt_queue`).
-- Runs in **IRAM (Interrupt RAM)** for **low latency**.
+- `QueueHandle_t` is a **pointer** to a queue.
+- **Initially set to NULL**, meaning the queue **is not created yet**.
 
----
+Inside `app_main()`, the queue is **initialized** using `xQueueCreate()`:
+```c
+gpio_evt_queue = xQueueCreate(10, sizeof(uint32_t));
+```
+- **First argument (`10`)** → Queue can hold **up to 10 messages**.
+- **Second argument (`sizeof(uint32_t)`)** → Each message is **a 32-bit integer** (the GPIO number that triggered the interrupt).
 
-### **📌 GPIO Task (`gpio_task_example`)**
+
+
+### 📌 GPIO Task (`gpio_task_example`)
+The main function `(app_main)` creates a FreeRTOS task `(gpio_task_example)`.
 ```c
 static void gpio_task_example(void* arg)
 {
@@ -98,12 +105,64 @@ static void gpio_task_example(void* arg)
     }
 }
 ```
-- Runs **indefinitely** (`for(;;)`).
-- Waits for **an event in the queue** (`xQueueReceive`).
+- The task enters a `for(;;)` loop, making it run **indefinitely**
+- Waits for **an event in the queue** (`xQueueReceive`)
+    - **If the queue has data**, it reads the **GPIO number** (`0`).
+    - **If the queue is empty**, it remains in a waiting state (`portMAX_DELAY` makes it wait forever).
 - **Prints GPIO status** when the button is pressed.
+    - It prints the GPIO number and its current level. 
+    - The function gpio_get_level(io_num) reads the GPIO0 state (high or low)
+    - 
 
----
+### 📌 Interrupt Service Routine (`ISR`)
+```c
+static void IRAM_ATTR gpio_isr_handler(void* arg)
+{
+    uint32_t gpio_num = (uint32_t) arg;  // Get the GPIO number
+    xQueueSendFromISR(gpio_evt_queue, &gpio_num, NULL); // Send event to queue
+}
+```
+- **This function runs when GPIO0 detects a button press**.
+- **Sends an event to the queue** (`gpio_evt_queue`).
+- Runs in **IRAM (Interrupt RAM)** for **low latency**.
 
+
+
+### 📌 gpio_isr_handler_add
+```c
+gpio_isr_handler_add(GPIO_NUM_0, gpio_isr_handler, (void*) GPIO_NUM_0);
+```
+- First Parameter (`GPIO_NUM_0`) tells the ESP32 which pin should trigger the interrupt. `GPIO0` will generate an interrupt when triggered.
+- Second Parameter (`gpio_isr_handler`) tells which function handles the interrupt. `gpio_isr_handler` is the function name that will execute when an interrupt occurs.
+- Third Parameter `((void*) GPIO_NUM_0)` pass parameter for ISR handler. Here, we pass `GPIO_NUM_0` as a parameter so the ISR knows which GPIO triggered the interrupt.
+You may find definition in \esp\v5.1.5\esp-idf\components\driver\gpio\include\driver\gpio.h
+```c
+/**
+  * @brief Add ISR handler for the corresponding GPIO pin.
+  *
+  * Call this function after using gpio_install_isr_service() to
+  * install the driver's GPIO ISR handler service.
+  *
+  * The pin ISR handlers no longer need to be declared with IRAM_ATTR,
+  * unless you pass the ESP_INTR_FLAG_IRAM flag when allocating the
+  * ISR in gpio_install_isr_service().
+  *
+  * This ISR handler will be called from an ISR. So there is a stack
+  * size limit (configurable as "ISR stack size" in menuconfig). This
+  * limit is smaller compared to a global GPIO interrupt handler due
+  * to the additional level of indirection.
+  *
+  * @param gpio_num GPIO number
+  * @param isr_handler ISR handler function for the corresponding GPIO number.
+  * @param args parameter for ISR handler.
+  *
+  * @return
+  *     - ESP_OK Success
+  *     - ESP_ERR_INVALID_STATE Wrong state, the ISR service has not been initialized.
+  *     - ESP_ERR_INVALID_ARG Parameter error
+  */
+esp_err_t gpio_isr_handler_add(gpio_num_t gpio_num, gpio_isr_t isr_handler, void *args);
+```
 ### **📌 Required Header Files**
 ```c
 #include <stdio.h>
