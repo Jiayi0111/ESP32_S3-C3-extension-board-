@@ -45,7 +45,7 @@ D:\esp32s3\hello_world
 ### ✅ **Method 1: Manually Copying the Folder**  
 If you copied the `hello_world` folder manually, open **VSCode**, then:  
 1. Click on **File** → **Open Folder**  
-2. Navigate to **D:\esp32s3\hello_world**  
+2. Navigate to **...\esp32s3\hello_world**  
 3. Click **Select Folder** to open the project  
 
 ---
@@ -54,7 +54,7 @@ If you copied the `hello_world` folder manually, open **VSCode**, then:
 Alternatively, you can directly **open the example in VSCode**:  
 1. Open **VSCode**  
 2. Click on **File** → **Open Folder**  
-3. Navigate to **D:\esp32c3\hello_world**  
+3. Navigate to **...\esp32s3\hello_world**  
 4. Click **Select Folder**  
 
 ---
@@ -82,6 +82,8 @@ Click the chip icon to choose the target ESP chip.
 ![image](https://github.com/user-attachments/assets/4b355a70-cb33-4e91-aaf8-d270b9675fa7)
 
 Then, a list of available ESP chips will appear—select **esp32s3**.
+（if you are using ESP32-WROOM-32E 4MB, select **esp32**）
+（if you are using ESP32C3 4MB, select **esp32c3**）
 
 ### **2️⃣ Selecting the Flashing Method**
 choose **ESP-PROG-2**
@@ -131,6 +133,7 @@ Inside **`.vscode/settings.json`**, you’ll find key configurations, you may ch
   ✅ **Compile the code**  
   ✅ **Flash it to the ESP32**  
   ✅ **Open the serial terminal for debugging**  
+
 
 ### **📌 Running the Program and Viewing the Output**  
 After flashing, the **terminal will open automatically**, displaying messages like:
