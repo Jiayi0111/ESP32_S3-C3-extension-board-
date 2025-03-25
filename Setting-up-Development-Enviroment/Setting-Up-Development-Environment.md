@@ -58,5 +58,5 @@ If the installation fails, you can seek help by posting your issue on our **foru
 
 ## Next
 
-- [2.1 Installing Multiple Versions of ESP‐IDF](InstallingMultipleVersionsofESP‐IDF)
-- [3. Hello_world](Hello_world)
+- [2.1 Installing Multiple Versions of ESP‐IDF](InstallingMultipleVersionsofESP‐IDF.md)
+- [3. Hello_world](Hello_world.md)

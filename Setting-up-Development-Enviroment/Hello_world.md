@@ -163,5 +163,5 @@ Ctrl + ]
 
 
 ## Next
-[Understanding Project Structure](BasicProjectStructure)
-[Using Flash Download Tool to Flash](UsingFlashDownloadTooltoFlash)
+[Understanding Project Structure](BasicProjectStructure.md)
+[Using Flash Download Tool to Flash](UsingFlashDownloadTooltoFlash.md)

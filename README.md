@@ -1,5 +1,11 @@
-# ESP32S3/C3 extension board
+Developing ESP32 with Arduino
+[Getting Started with ESP32: Your Ultimate Beginner's Guide](Get_started\Get_Started.md)
+- [Setting Up Arduino for ESP32](Get_started\ArduinoEnvironment.md)
+- [Arduino Code Basics](Get_started\ArduinoUnderstanding.md)
+- [Understanding Arduino Syntax](Get_started\ArduinoSyntax.md)
 
+
+**GO Advanced with ESP-IDF and FreeRTOS:**
 [Go to part 1.0 - Setting Up Development Environment](Setting-up-Development-Enviroment/Setting-Up-Development-Environment.md)
  -  [part 1.0.1 Installing Multiple Versions of ESP‐IDF](Setting-up-Development-Enviroment/InstallingMultipleVersionsofESP‐IDF.md)
 
@@ -7,6 +13,6 @@
  - [part 1.1.1 Understanding Basic Project Structure](Setting-up-Development-Enviroment/BasicProjectStructure.md)
  - [part 1.1.2 Using Flash Download Tool to Flash ESP32 Firmware](Setting-up-Development-Enviroment/UsingFlashDownloadTooltoFlash.md)
 
-[Go to part 2.1 - GPIO](GPIO/GPIO_key_input.md)
- - [part 2.1.0 ESP32 Blink Example](GPIO/blink_3led.md)
- - [part 2.1.1 ESP32 GPIO_example breakdown](GPIO/ESP32_GPIO_example.md)
+[Go to part 2.1 - GPIO](GPIO_ESP_IDE/GPIO_key_input.md)
+ - [part 2.1.0 ESP32 Blink Example](GPIO_ESP_IDE/blink_3led.md)
+ - [part 2.1.1 ESP32 GPIO_example breakdown](GPIO_ESP_IDE/ESP32_GPIO_example.md)
