@@ -1,4 +1,4 @@
-# 💡 GPIO Output – Light Up an LED  
+# 💡 GPIO Output – Light Up and Blink an LED  
 
 When learning any microcontroller, one of the simplest yet most essential experiments is controlling an LED using a GPIO pin. This lesson will walk you through how to **light up and blink an LED** on the **ESP32**, and now includes instructions on using the **custom extension board** you designed!
 
@@ -155,6 +155,6 @@ void loop() {
 ```
 
 Upload the code — you’ll see your LED blinking on and off every second.
-
+<video controls src="ce634d663ada75c5fe49fb9b622348c5.mp4" title="LED blinking"></video>
 
 
