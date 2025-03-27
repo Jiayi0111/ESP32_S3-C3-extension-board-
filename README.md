@@ -42,7 +42,6 @@
 ## I2C
 - *(Content not available yet)*
 
----
 
 ## SPI
 - *(Content not available yet)*
@@ -59,19 +58,27 @@
 
 ## Sensor Examples
 
-- [Temperature and Humidity Sensor DHT22](Sensors/TemperatureHumidityDHT22.ino)
-- [Temperature Sensor LMT87](Sensors/TemperatureLMT87.ino)
-- [Ultrasonic Ranging Module HC-SR04](Sensors/UltrasonicRangingModuleHC-SR04.ino)
+- [Temperature and Humidity Sensor DHT22 🔧](Sensors/TemperatureHumidityDHT22.ino)
+- [Temperature Sensor LMT87 🔧](Sensors/TemperatureLMT87.ino)
+- [Ultrasonic Ranging Module HC-SR04 🔧](Sensors/UltrasonicRangingModuleHC-SR04.ino)
+- [Infrared Transistor SFH4855 （暂时没有.ino） 🔧]()
 - *(Additional sensor examples coming soon)*
-
 
 
 ## Display Examples
 
-- *(Content not available yet)*
-- *(Content not available yet)*
+- [LCD ILI9341 Resistive Touch Display 🔧](Diaplay\TFT_display_Test.ino)
+- [LCD1602 Display 🔧](Diaplay\LCD1602_Test.ino)
+- [SH1106 OLED Display 🔧](Diaplay\oled_lcd_test.ino)
+- [LCD ILI9341 display 🔧](Diaplay\lcd_ili9431_test.ino)
 
-
+## Other comonents' example
+- [Diaplay pics in SD card 🔧](SDcard\ESP32_SDcard_jpeg.ino)
+- [SG90 Micro Servo Motor (下周做)]() 
+- [Buzzer Module(下周做)]() 
+- [MOT-BRU-012 DC Motor (等JX回来)]()
+- [Relay Modules (MOD-REL-004 and MOD-REL-012)(等JX回来)]()
+- [L298N Dual H-Bridge Motor Driver (等JX回来)]()
 
 ## Demo Projects
 
