@@ -47,7 +47,8 @@
 ## SPI
 - *(Content not available yet)*
 
-
+## Bluetooth Connection
+- *(Content not available yet)* [🔧]()
 
 ## WiFi Connection
 
