@@ -12,7 +12,8 @@
   - [Setting Up Arduino for ESP32](Get_started/ArduinoEnvironment.md)
   - [Arduino Code Basics](Get_started/ArduinoUnderstanding.md)
   - [Understanding Arduino Syntax](Get_started/ArduinoSyntax.md)
-
+  
+  for better understanding [Sturcuture of ArduinoIDE or comapre ARduino IDE with ESP-IDE 还没写，有空就写]()
 
 
 ## GPIO Output
@@ -55,7 +56,7 @@
 - [Send Text from Phone to ESP32](WiFi/SendMessageToESP.md) [🔧](WiFi/SendMessageToESP.ino)
 
 
-
+## 所有exmample需要加一下解释和datasheet
 ## Sensor Examples
 
 - [Temperature and Humidity Sensor DHT22 🔧](Sensors/TemperatureHumidityDHT22.ino)
