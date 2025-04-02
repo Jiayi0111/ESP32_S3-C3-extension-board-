@@ -36,19 +36,20 @@
 
 
 ## Interrupt Handling
-- *(Content not available yet)*
 
+- [Interrupt Handling: How to Use External Interrupts](InterruptHandling\interrupthandling.md) [🔧](InterruptHandling\interrupthandling.ino)
 
 
 ## I2C
-- *(Content not available yet)*
+- [ESP32 I2C Display Tutorial – Using OLED and LCD 1602 with I2C](I2C\I2C.md)
+[🔧](Diaplay\LCD1602_Test.ino)[🔧](Diaplay\lcd_ili9431_test.ino)
 
 
 ## SPI
-- *(Content not available yet)*
+- [ESP32 SPI Display Tutorial – Using ILI9341 with SPI](SPI\SPI.md) [🔧](Diaplay\TFT_display_Test.ino)
 
 ## Bluetooth Connection
-- *(Content not available yet)* [🔧]()
+- [ESP32 Bluetooth Tutorial – Classic SPP vs BLE](Bluetooth\Bluetooth.md) [🔧](Bluetooth\bluetooth.ino)
 
 ## WiFi Connection
 
@@ -60,12 +61,21 @@
 ## 所有exmample需要加一下解释和datasheet
 ## Sensor Examples
 
+Custom 1-Wire
 - [Temperature and Humidity Sensor DHT22 🔧](Sensors/TemperatureHumidityDHT22.ino)
-- [Temperature Sensor LMT87 🔧](Sensors/TemperatureLMT87.ino)
-- [Ultrasonic Ranging Module HC-SR04 🔧](Sensors/UltrasonicRangingModuleHC-SR04.ino)
-- [Infrared Transistor SFH4855 （暂时没有.ino） 🔧]()
-- *(Additional sensor examples coming soon)*
 
+Analog (ADC)
+- [Temperature Sensor LMT87 🔧](Sensors/TemperatureLMT87.ino)
+- [Infrared Transistor SFH4855 （暂时没有.ino） 🔧]()
+
+GPIO (Trigger & Echo)
+- [Ultrasonic Ranging Module HC-SR04 🔧](Sensors/UltrasonicRangingModuleHC-SR04.ino)
+
+ I2S
+- [INMP441 Omnidirectional Microphone](OtherExamples\bluetoothspeaker.ino)
+
+
+- *(Additional sensor examples coming soon)*
 
 ## Display Examples
 
@@ -73,6 +83,7 @@
 - [LCD1602 Display 🔧](Diaplay\LCD1602_Test.ino)
 - [SH1106 OLED Display 🔧](Diaplay\oled_lcd_test.ino)
 - [LCD ILI9341 display 🔧](Diaplay\lcd_ili9431_test.ino)
+- 
 
 ## Other comonents' example
 - [Diaplay pics in SD card 🔧](SDcard\ESP32_SDcard_jpeg.ino)
@@ -81,10 +92,12 @@
 - [MOT-BRU-012 DC Motor (等JX回来)]()
 - [Relay Modules (MOD-REL-004 and MOD-REL-012)(等JX回来)]()
 - [L298N Dual H-Bridge Motor Driver (等JX回来)]()
+- [Hat SPK2 speaker](OtherExamples\speaker.ino)
+
 
 ## Demo Projects
 
-- *(Content not available yet)*
+- [Smart Bluetooth Speaker](Demo\BluetoothSpeaker.md)
 - *(Content not available yet)*
 
 ---
@@ -96,12 +109,14 @@
   - [part 1.0.1 Installing Multiple Versions of ESP‐IDF](Setting-up-Development-Enviroment/InstallingMultipleVersionsofESP‐IDF.md)
 
 ### Hello World (Write, Compile & Flash)
-- [Go to part 1.1 - Hello_world](Setting-up-Development-Enviroment/Hello_world.md)
+- [Go to part 1.1 - Hello_world](Setting-up-Development-Enviroment/Hello_world.md)[🔧](Setting-up-Development-Enviroment\Hello_world_example)
   - [part 1.1.1 Understanding Basic Project Structure](Setting-up-Development-Enviroment/BasicProjectStructure.md)
   - [part 1.1.2 Using Flash Download Tool to Flash ESP32 Firmware](Setting-up-Development-Enviroment/UsingFlashDownloadTooltoFlash.md)
 
 ### GPIO with ESP-IDF
 - [Go to part 2.1 - GPIO](GPIO_ESP_IDE/GPIO_key_input.md)
-  - [part 2.1.0 ESP32 Blink Example](GPIO_ESP_IDE/blink_3led.md)
-  - [part 2.1.1 ESP32 GPIO_example Breakdown](GPIO_ESP_IDE/ESP32_GPIO_example.md)
+  - [part 2.1.0 ESP32 Blink Example](GPIO_ESP_IDE/blink_3led.md)[🔧](GPIO_ESP_IDE\blink)
+  - [part 2.1.1 ESP32 GPIO_example Breakdown](GPIO_ESP_IDE/ESP32_GPIO_example.md) [🔧](GPIO_ESP_IDE\generic_gpio)
 
+### Voice Wake‑Up with ESP‑SKAINet
+- [How to Implement Voice Wake‑Up with ESP‑SKAINet](WakeUp\VoiceWakeUp.md)[🔧](WakeUp\esp-skainet-master)
