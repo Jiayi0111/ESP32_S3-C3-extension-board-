@@ -4,7 +4,8 @@
 
 **Click the 🔧 icon to access the Arduino code.**
 
-
+## Our Super Convenient Hardware 
+- [Introduction to Expansion Board](Hardware\ee4002d-guide-main\Hardware.md)
 
 ## Getting Started with ESP32: Your Ultimate Beginner's Guide
 
