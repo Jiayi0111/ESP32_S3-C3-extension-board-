@@ -118,14 +118,14 @@ This project implements a **real-time audio streaming device** using the **ESP32
 +----------------+                  +----------------+                  +----------------+
 |                |   WiFi/WebSocket |                |     Processing   |                |
 |  ESP32 Device  | <--------------> | Backend Server | <--------------> |  OpenAI API    |
-|  (Mic+Speaker) |      Audio       |                |                  | Whisper & TTS  |
+|  (Mic+Speaker) |      Audio       |                |                  | Whisper(STT&TTS)|
 +----------------+                  +----------------+                  +----------------+
        ^                                   ^
        |                                   |
     I2S Audio                         Transcription and
     Capture/Playback                  Speech Synthesis
 ```
-
+![alt text](image-2.png)
 ---
 
 ### 🛠️ Features
