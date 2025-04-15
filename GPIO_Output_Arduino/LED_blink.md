@@ -158,3 +158,5 @@ Upload the code — you’ll see your LED blinking on and off every second.
 <video controls src="ce634d663ada75c5fe49fb9b622348c5.mp4" title="LED blinking"></video>
 
 
+## 🧠 Bonus:
+[🌈 Running Light Experiment](GPIO_Output_Arduino\LED_RunningLight.md)
