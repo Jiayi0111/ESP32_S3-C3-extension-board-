@@ -159,4 +159,4 @@ Upload the code — you’ll see your LED blinking on and off every second.
 
 
 ## 🧠 Bonus:
-[🌈 Running Light Experiment](GPIO_Output_Arduino\LED_RunningLight.md)
+[🌈 Running Light Experiment](LED_RunningLight.md)
