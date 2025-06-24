@@ -210,8 +210,8 @@ This separation of tasks allows:
 | Audio Transmission (ESP32→Server) | ✅ Data packets sent successfully |
 | Audio Reception (Server→ESP32) | ✅ Binary frames received |
 | Audio Playback | ✅ Confirmed working with test tones |
-| Dual-Core Performance | ✅ Successfully distributing processing across cores |
-| Server Processing | ⚠️ Empty files received by Whisper - format adjustment needed |
+| Dual-Core Performance | Successfully distributing processing across cores |
+| Server Processing | ✅ Empty files received by Whisper |
 
 ---
 
