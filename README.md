@@ -2,12 +2,16 @@
 
 **Click the 🔧 icon to access the Arduino code.**
 
+
+
+## Getting Started with ESP32
+
+- [Getting Started with ESP32: Your Ultimate Beginner's Guide](Get_started/Get_Started.md)
+
 ## Our Super Convenient Hardware
 - [Introduction to Expansion Board](Hardware/ee4002d-guide-main/Hardware.md)
 
-## Getting Started with ESP32: Your Ultimate Beginner's Guide
-
-- [Getting Started with ESP32: Your Ultimate Beginner's Guide](Get_started/Get_Started.md)
+## Getting Started with Arduino
   - [Setting Up Arduino for ESP32](Get_started/ArduinoEnvironment.md)
   - [Arduino Code Basics](Get_started/ArduinoUnderstanding.md)
   - [Understanding Arduino Syntax](Get_started/ArduinoSyntax.md)
@@ -49,17 +53,19 @@
 - [ESP32 Access Point (AP) Mode](WiFi/APmode.md) [🔧](WiFi/APmode.md) [🔧](WiFi/WebPage_withAPmode.ino)
 - [Send Text from Phone to ESP32](WiFi/SendMessageToESP.md) [🔧](WiFi/SendMessageToESP.ino)
 
-## Custom 1-Wire
+## Sensor Examples
+
+### Custom 1-Wire
 - [Temperature and Humidity Sensor DHT22 🔧](Sensors/TemperatureHumidityDHT22.ino)
 
-## Analog (ADC)
+### Analog (ADC)
 - [Temperature Sensor LMT87 🔧](Sensors/TemperatureLMT87.ino)
 - [Infrared Transistor SFH4855🔧]()
 
-## GPIO (Trigger & Echo)
+### GPIO (Trigger & Echo)
 - [Ultrasonic Ranging Module HC-SR04 🔧](Sensors/UltrasonicRangingModuleHC-SR04.ino)
 
-## I2S
+### I2S
 - [INMP441 Omnidirectional Microphone](OtherExamples/bluetoothspeaker.ino)
 - *(Additional sensor examples coming soon)*
 
@@ -81,7 +87,9 @@
 
 ## Demo Projects
 
-- [Smart Bluetooth Speaker](Demo/BluetoothSpeaker.md)
+- [Smart Bluetooth Speaker](Demo/BluetoothSpeaker.md)[🔧](Demo/bluetoothspeaker.ino)
+- [Bluetooth Speaker with Microphone for ChatGPT Web Voice Interaction (Enhanced Version)](Demo/HomeMadeXIaozhi.md) [🔧](Demo/HomeMadeXiaozhi.ino)
+- [Smart Curtain Control System](Demo/SmartCurtainControlSystem.md)
 - *(More Demo projects coming soon)*
 
 ---
@@ -105,3 +113,5 @@
 ### Voice Wake‑Up with ESP‑SKAINet
 - [How to Implement Voice Wake‑Up with ESP‑SKAINet](WakeUp/VoiceWakeUp.md)[🔧](WakeUp/esp-skainet-master)
 
+## Demo Projects
+- [Intelligent, Voice-interactive XiaoZhi](Demo/Xiaozhi.md)[🔧](Demo/xiaozhi-esp32)

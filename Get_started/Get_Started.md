@@ -35,7 +35,7 @@ The ESP32 chip has 48 pins, 34 of which are programmable GPIO pins. Each GPIO pi
 
 To address these limitations, our specially designed extension boards significantly enhance ESP32's capabilities by providing additional GPIO pins and dedicated ports for multiple I2C, SPI, UART interfaces. This resolves common issues like pin shortages and difficulties using multiple I2C devices simultaneously, greatly simplifying and expanding the possibilities for your advanced ESP32 projects.
 
-这段表述准确吗？？
+
 
 ---
 
